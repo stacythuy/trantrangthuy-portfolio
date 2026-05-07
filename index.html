@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stacy Tran — Student Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #1a2744;
@@ -227,6 +227,41 @@
     background: var(--accent);
   }
   .hero h1 { color: var(--navy); margin-bottom: 1rem; }
+
+  /* HERO NAME DISPLAY */
+  .hero-name {
+    margin-bottom: 1.25rem;
+    line-height: 1;
+  }
+  .hero-name-first {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+  .hero-name-last {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4.5rem, 9vw, 7.5rem);
+    font-weight: 900;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    position: relative;
+  }
+  .hero-name-last::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin-top: 0.6rem;
+  }
   .hero-tagline {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
@@ -1038,19 +1073,11 @@
           <a onclick="showPage('projects')">All Projects</a>
         </div>
         <div class="nav-dropdown-section">
-          <span class="nav-dropdown-label">Categories</span>
-          <a onclick="showPage('projects');setTimeout(()=>scrollToSection('sec-leadership',null),80)">Leadership &amp; Initiative</a>
-          <a onclick="showPage('projects');setTimeout(()=>scrollToSection('sec-communication',null),80)">Communication &amp; Global</a>
-          <a onclick="showPage('projects');setTimeout(()=>scrollToSection('sec-community',null),80)">Community &amp; Impact</a>
-          <a onclick="showPage('projects');setTimeout(()=>scrollToSection('sec-sustainability',null),80)">Sustainability &amp; Innovation</a>
-          <a onclick="showPage('projects');setTimeout(()=>scrollToSection('sec-awards',null),80)">Awards &amp; Recognition</a>
-        </div>
-        <div class="nav-dropdown-section">
           <span class="nav-dropdown-label">Detailed Pages</span>
-          <a onclick="showSubpage('leadership')">Leadership Subpage</a>
-          <a onclick="showSubpage('communication')">Communication Subpage</a>
-          <a onclick="showSubpage('community')">Community Subpage</a>
-          <a onclick="showSubpage('sustainability')">Sustainability Subpage</a>
+          <a onclick="showSubpage('leadership')">Leadership &amp; Initiative</a>
+          <a onclick="showSubpage('community')">Community &amp; Impact</a>
+          <a onclick="showSubpage('communication')">Communication &amp; Global</a>
+          <a onclick="showSubpage('sustainability')">Sustainability &amp; Innovation</a>
         </div>
       </div>
     </li>
@@ -1075,9 +1102,12 @@
             <div class="hero-eyebrow-line"></div>
             <span>DSA Portfolio — 2025</span>
           </div>
-          <h1>Stacy<br>Tran</h1>
+          <div class="hero-name">
+            <span class="hero-name-first">Stacy</span>
+            <span class="hero-name-last">Tran</span>
+          </div>
           <p class="hero-tagline">Student Leader · Community Builder · Communication & Sustainability Advocate</p>
-          <p class="hero-intro">Growing up between Vietnam and Singapore, I have come to understand that leadership is not a position — it is a practice of listening, initiating, and caring. From organising cross-ASEAN debate championships to visiting nursing homes and tackling sustainability challenges, I am drawn to work that connects people and creates lasting change.</p>
+          <p class="hero-intro">Coming to Singapore on the MOE School-based Scholarship opened doors I did not know existed — and I walked through each one with purpose. From organising cross-ASEAN debate championships to designing nursing home programmes and tackling sustainability challenges, I am drawn to work that connects people and creates lasting change.</p>
           <div style="display:flex;gap:1rem;flex-wrap:wrap;">
             <button class="btn btn-primary" onclick="showPage('projects')">View My Work</button>
             <button class="btn btn-outline" onclick="showPage('about')">About Me</button>
@@ -1085,15 +1115,15 @@
           <div class="hero-stats">
             <div class="stat-item">
               <div class="stat-number">4+</div>
-              <div class="stat-label">Years of Leadership</div>
+              <div class="stat-label">Leadership Roles</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">200+</div>
-              <div class="stat-label">Hours of Community Service</div>
+              <div class="stat-number">3</div>
+              <div class="stat-label">Countries Engaged</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">7</div>
-              <div class="stat-label">Awards & Honours</div>
+              <div class="stat-number">Gold</div>
+              <div class="stat-label">NYAA Award</div>
             </div>
           </div>
         </div>
@@ -1128,7 +1158,7 @@
           <span class="highlight-num">01</span>
           <span class="highlight-tag">Leadership & Initiative</span>
           <h3>ASEAN Debating Championship</h3>
-          <p>Founded and organised an international debate championship connecting schools across Southeast Asia, overseeing tabulation, adjudicator management and international teams coordination.</p>
+          <p>Founded and organised an international debate championship connecting schools across Southeast Asia, overseeing logistics, speaker management and cross-cultural coordination.</p>
           <span class="highlight-arrow">Explore &#8594;</span>
         </div>
         <!-- Card 2 -->
@@ -1136,23 +1166,23 @@
           <span class="highlight-num">02</span>
           <span class="highlight-tag">Community & Impact</span>
           <h3>Nursing Home Engagement Programme</h3>
-          <p>Designed and led regular visits to elderly residents at NTUC Senior Day Care Centres, building genuine relationships through storytelling, active games and intergenerational conversation over a year.</p>
+          <p>Designed and led regular visits to elderly residents, building genuine relationships through storytelling, games and intergenerational conversation over several semesters.</p>
           <span class="highlight-arrow">Explore &#8594;</span>
         </div>
         <!-- Card 3 -->
-        <div class="highlight-card fade-in" onclick="showSubpage('sustainability')">
+        <div class="highlight-card fade-in" onclick="showSubpage('communication')">
           <span class="highlight-num">03</span>
-          <span class="highlight-tag">Sustainability & Innovation</span>
-          <h3>Recycled Oil Cleaning Product</h3>
-          <p>Developed a circular-economy business concept turning waste cooking oil into biodegradable cleaning products, presented at the Blue Ocean Student Entrepreneur Competition.</p>
+          <span class="highlight-tag">Communication & Global Perspectives</span>
+          <h3>Model United Nations & Competitive Debate</h3>
+          <p>Competed and chaired across multiple MUN conferences while representing the school in interschool and ASEAN-level debate tournaments, developing fluency in persuasion, policy and cross-cultural dialogue.</p>
           <span class="highlight-arrow">Explore &#8594;</span>
         </div>
         <!-- Card 4 -->
-        <div class="highlight-card fade-in" onclick="showSubpage('communication')">
+        <div class="highlight-card fade-in" onclick="showSubpage('sustainability')">
           <span class="highlight-num">04</span>
-          <span class="highlight-tag">Communication & Global Perspectives</span>
-          <h3>Model United Nations & Debate Leadership</h3>
-          <p>Competed across multiple MUN conferences and debate competitions while leading the school debate CCA as Vice President, mentoring junior debaters and driving team culture.</p>
+          <span class="highlight-tag">Sustainability & Innovation</span>
+          <h3>Recycled Oil Cleaning Product</h3>
+          <p>Developed a circular-economy business concept turning waste cooking oil into biodegradable cleaning products, presented at the Blue Ocean Student Entrepreneur Competition.</p>
           <span class="highlight-arrow">Explore &#8594;</span>
         </div>
       </div>
@@ -1256,34 +1286,17 @@
             <span class="ahl-theme-tag ahl-tag-navy">Leadership & Initiative</span>
             <h3>Building Bridges Across ASEAN</h3>
             <span class="ahl-best">Best Achievement: ASEAN Debating Championship</span>
-            <p>From a conversation about how debate competitions rarely crossed national borders for secondary school students, I decided to do something about it. As founder and organiser of the ASEAN Debating Championship, I coordinated with schools from multiple countries, managed adjudicators, debate tabulation and communications — all while sitting my own exams.</p>
+            <p>From a conversation about how debate competitions rarely crossed national borders, I decided to do something about it. As founder and organiser of the ASEAN Debating Championship, I coordinated with schools from multiple countries, managed speakers, logistics and communications — all while sitting my own exams.</p>
             <ul class="ahl-achievements">
               <li>Founded and led ADC from concept to execution</li>
-              <li>Vice President, Debate & Oratorical CCA — mentored 15+ juniors</li>
+              <li>Vice President, Debate CCA — mentored 15+ juniors</li>
               <li>Hosted school talkshows and assemblies</li>
             </ul>
             <button class="btn btn-ghost" onclick="showSubpage('leadership')">Learn More &#8594;</button>
           </div>
         </div>
 
-        <!-- Highlight 2: Communication -->
-        <div class="about-highlight-card fade-in">
-          <div class="ahl-color-bar ahl-mid"></div>
-          <div class="ahl-body">
-            <span class="ahl-theme-tag ahl-tag-mid">Communication & Global Perspectives</span>
-            <h3>Speaking Up, Listening Deeply</h3>
-            <span class="ahl-best">Best Achievement: MUN Chair & Debate Awards</span>
-            <p>Communication, for me, has never been about being the loudest voice — it is about asking the right questions and creating space for others. Debate and MUN have taught me to hold multiple perspectives simultaneously, to argue with conviction while remaining genuinely open to persuasion.</p>
-            <ul class="ahl-achievements">
-              <li>Chaired multiple MUN committees at national level</li>
-              <li>Multiple debate competition awards</li>
-              <li>Represented school at ASEAN-level forums</li>
-            </ul>
-            <button class="btn btn-ghost" onclick="showSubpage('communication')">Learn More &#8594;</button>
-          </div>
-        </div>
-
-        <!-- Highlight 3: Community -->
+        <!-- Highlight 2: Community -->
         <div class="about-highlight-card fade-in">
           <div class="ahl-color-bar ahl-green"></div>
           <div class="ahl-body">
@@ -1297,6 +1310,23 @@
               <li>Designed intergenerational activity programmes</li>
             </ul>
             <button class="btn btn-ghost" onclick="showSubpage('community')">Learn More &#8594;</button>
+          </div>
+        </div>
+
+        <!-- Highlight 3: Communication -->
+        <div class="about-highlight-card fade-in">
+          <div class="ahl-color-bar ahl-mid"></div>
+          <div class="ahl-body">
+            <span class="ahl-theme-tag ahl-tag-mid">Communication & Global Perspectives</span>
+            <h3>Speaking Up, Listening Deeply</h3>
+            <span class="ahl-best">Best Achievement: MUN Chair & Debate Awards</span>
+            <p>Communication, for me, has never been about being the loudest voice — it is about asking the right questions and creating space for others. Debate and MUN have taught me to hold multiple perspectives simultaneously, to argue with conviction while remaining genuinely open to persuasion.</p>
+            <ul class="ahl-achievements">
+              <li>Chaired multiple MUN committees at national level</li>
+              <li>Multiple debate competition awards</li>
+              <li>Represented school at ASEAN-level forums</li>
+            </ul>
+            <button class="btn btn-ghost" onclick="showSubpage('communication')">Learn More &#8594;</button>
           </div>
         </div>
 
@@ -1470,20 +1500,20 @@
   <div class="projects-nav">
     <div class="projects-nav-inner">
       <div class="proj-nav-tab active" onclick="scrollToSection('sec-leadership', this)">Leadership</div>
-      <div class="proj-nav-tab" onclick="scrollToSection('sec-communication', this)">Communication</div>
       <div class="proj-nav-tab" onclick="scrollToSection('sec-community', this)">Community</div>
+      <div class="proj-nav-tab" onclick="scrollToSection('sec-communication', this)">Communication</div>
       <div class="proj-nav-tab" onclick="scrollToSection('sec-sustainability', this)">Sustainability</div>
       <div class="proj-nav-tab" onclick="scrollToSection('sec-awards', this)">Awards</div>
     </div>
   </div>
 
   <div class="container">
-    <!-- A: Leadership -->
+    <!-- 1: Leadership -->
     <div class="projects-section-block" id="sec-leadership">
       <div class="psb-header fade-in">
-        <span class="overline">A</span>
         <h2>Leadership & Initiative</h2>
         <p>Leadership through initiative, organisation, and responsibility — creating structures and spaces that enable others to thrive.</p>
+        <button class="btn btn-ghost" style="margin-top:1rem;" onclick="showSubpage('leadership')">More Experiences &#8594;</button>
       </div>
       <div class="projects-grid">
         <div class="project-card" onclick="showSubpage('leadership')">
@@ -1498,64 +1528,37 @@
           <div class="pc-visual pc-mid">VP</div>
           <div class="pc-body">
             <span class="pc-tag">Vice President</span>
-            <h4>Debate CCA Leadership</h4>
+            <h4>Debate & Oratorical CCA</h4>
             <p>Led team culture, mentorship and training programmes.</p>
           </div>
         </div>
         <div class="project-card" onclick="showSubpage('leadership')">
-          <div class="pc-visual pc-navy">MC</div>
+          <div class="pc-visual pc-navy">L2E</div>
           <div class="pc-body">
-            <span class="pc-tag">Event Host</span>
-            <h4>School Talkshows & Events</h4>
-            <p>Hosted school assemblies and organised large-scale events.</p>
+            <span class="pc-tag">Founder & President</span>
+            <h4>Learn2Earn Entrepreneurship CCA</h4>
+            <p>Founded and led school entrepreneurship CCA from the ground up.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- B: Communication -->
-    <div class="projects-section-block" id="sec-communication">
-      <div class="psb-header fade-in">
-        <span class="overline">B</span>
-        <h2>Communication & Global Perspectives</h2>
-        <p>Engaging with complex ideas, diverse audiences, and global issues through formal debate, MUN, and cross-cultural collaboration.</p>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card" onclick="showSubpage('communication')">
-          <div class="pc-visual pc-mid">MUN</div>
-          <div class="pc-body">
-            <span class="pc-tag">Delegate & Chair</span>
-            <h4>Model United Nations</h4>
-            <p>Competed and chaired at national and regional conferences.</p>
-          </div>
-        </div>
-        <div class="project-card" onclick="showSubpage('communication')">
-          <div class="pc-visual pc-navy">DB</div>
-          <div class="pc-body">
-            <span class="pc-tag">Debater</span>
-            <h4>Competitive Debate</h4>
-            <p>Multiple competition awards in BP and AP formats.</p>
-          </div>
-        </div>
-        <div class="project-card" onclick="showSubpage('communication')">
-          <div class="pc-visual pc-mid">ASEAN</div>
-          <div class="pc-body">
-            <span class="pc-tag">Representative</span>
-            <h4>ASEAN Student Forum</h4>
-            <p>Cross-cultural dialogue and regional collaboration experience.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- C: Community -->
+    <!-- 2: Community -->
     <div class="projects-section-block" id="sec-community">
       <div class="psb-header fade-in">
-        <span class="overline">C</span>
         <h2>Community & Impact</h2>
         <p>Service that goes beyond hours — building relationships, designing programmes, and showing up consistently for people who matter.</p>
+        <button class="btn btn-ghost" style="margin-top:1rem;" onclick="showSubpage('community')">More Experiences &#8594;</button>
       </div>
       <div class="projects-grid">
+        <div class="project-card" onclick="showSubpage('community')">
+          <div class="pc-visual pc-green">LNY</div>
+          <div class="pc-body">
+            <span class="pc-tag">Volunteer</span>
+            <h4>Lunar New Year Festival for Autism Kids</h4>
+            <p>Celebrated the festival with 1,000+ children with autism.</p>
+          </div>
+        </div>
         <div class="project-card" onclick="showSubpage('community')">
           <div class="pc-visual pc-green">NH</div>
           <div class="pc-body">
@@ -1565,30 +1568,57 @@
           </div>
         </div>
         <div class="project-card" onclick="showSubpage('community')">
-          <div class="pc-visual pc-green">SL</div>
+          <div class="pc-visual pc-green">TS</div>
           <div class="pc-body">
-            <span class="pc-tag">Service Learning</span>
-            <h4>School Service Projects</h4>
-            <p>Coordinated community outreach and volunteering initiatives.</p>
-          </div>
-        </div>
-        <div class="project-card" onclick="showSubpage('community')">
-          <div class="pc-visual pc-green">NYAA</div>
-          <div class="pc-body">
-            <span class="pc-tag">Gold Awardee</span>
-            <h4>NYAA Gold Award</h4>
-            <p>Three-year journey of service, skill, physical activity and expedition.</p>
+            <span class="pc-tag">Volunteer Mentor</span>
+            <h4>ThinkSingapore Mentorship</h4>
+            <p>Mentored youth in critical thinking and leadership skills.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- D: Sustainability -->
+    <!-- 3: Communication -->
+    <div class="projects-section-block" id="sec-communication">
+      <div class="psb-header fade-in">
+        <h2>Communication & Global Perspectives</h2>
+        <p>Engaging with complex ideas, diverse audiences, and global issues through formal debate, MUN, and real-world internship experience.</p>
+        <button class="btn btn-ghost" style="margin-top:1rem;" onclick="showSubpage('communication')">More Experiences &#8594;</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" onclick="showSubpage('communication')">
+          <div class="pc-visual pc-navy">DB</div>
+          <div class="pc-body">
+            <span class="pc-tag">Competitive Debater</span>
+            <h4>Competitive Debate</h4>
+            <p>Multiple competition awards in BP and AP formats.</p>
+          </div>
+        </div>
+        <div class="project-card" onclick="showSubpage('communication')">
+          <div class="pc-visual pc-mid">MUN</div>
+          <div class="pc-body">
+            <span class="pc-tag">Delegate & Chair</span>
+            <h4>Model United Nations</h4>
+            <p>Competed and chaired at national and regional conferences.</p>
+          </div>
+        </div>
+        <div class="project-card" onclick="showSubpage('communication')">
+          <div class="pc-visual pc-mid">SC</div>
+          <div class="pc-body">
+            <span class="pc-tag">Student Intern</span>
+            <h4>Work Exposure @ Science Centre</h4>
+            <p>Analysed Singapore's public transitional and third spaces.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4: Sustainability -->
     <div class="projects-section-block" id="sec-sustainability">
       <div class="psb-header fade-in">
-        <span class="overline">D</span>
         <h2>Sustainability & Innovation</h2>
-        <p>Tackling environmental challenges through practical, student-led projects that prototype, test and communicate real solutions.</p>
+        <p>Tackling environmental and social challenges through practical, student-led projects that prototype, research and communicate real solutions.</p>
+        <button class="btn btn-ghost" style="margin-top:1rem;" onclick="showSubpage('sustainability')">More Experiences &#8594;</button>
       </div>
       <div class="projects-grid">
         <div class="project-card" onclick="showSubpage('sustainability')">
@@ -1600,11 +1630,11 @@
           </div>
         </div>
         <div class="project-card" onclick="showSubpage('sustainability')">
-          <div class="pc-visual pc-warm">SEA</div>
+          <div class="pc-visual pc-warm">MRT</div>
           <div class="pc-body">
-            <span class="pc-tag">STEM Research</span>
-            <h4>Sea-Level Rise Project</h4>
-            <p>Environmental modelling and community impact analysis.</p>
+            <span class="pc-tag">STEM Engineering</span>
+            <h4>Piezo Sensors for MRT Energy</h4>
+            <p>Generating AC current from footstep energy at tapping machines.</p>
           </div>
         </div>
         <div class="project-card" onclick="showSubpage('sustainability')">
@@ -1618,10 +1648,9 @@
       </div>
     </div>
 
-    <!-- E: Awards -->
+    <!-- Awards -->
     <div class="projects-section-block" id="sec-awards">
       <div class="psb-header fade-in">
-        <span class="overline">E</span>
         <h2>Awards & Recognition</h2>
         <p>Selected highlights from competitions, leadership recognitions, and co-curricular achievements.</p>
       </div>
@@ -1637,7 +1666,7 @@
           <div class="award-medal">1</div>
           <div class="award-info">
             <h4>NUS Geography Challenge 2026</h4>
-            <p>Individual Gold Award & Grand Finalist · 2026</p>
+            <p>Individual Gold Award &amp; Grand Finalist · 2026</p>
           </div>
         </div>
         <div class="award-item fade-in">
@@ -1680,11 +1709,40 @@
       <button class="back-btn" onclick="showPage('projects')">&#8592; Back to Projects</button>
       <span class="overline">Leadership & Initiative</span>
       <h1>Creating Structures<br>That Outlast You</h1>
-      <p class="lead">From founding an international championship to leading a CCA of forty students, my approach to leadership is built around initiative, ownership and enabling others.</p>
+      <p class="lead">From founding international competitions to leading CCAs and representing student voices — my leadership has always been about building things that empower others long after I step back.</p>
     </div>
   </section>
   <div class="container">
-    <!-- ADC -->
+
+    <!-- 1: Debate VP -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Vice President</span>
+            <span class="meta-badge">2023–2024</span>
+          </div>
+          <h3>Debate & Oratorical CCA — Vice President</h3>
+          <p class="activity-overview">As Vice President of the school's Debate & Oratorical CCA, I was responsible for the day-to-day running of training sessions, mentorship of junior members, and building the culture of the team. The role required balancing people management, curriculum design and external competition coordination across two academic years.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Planned and led weekly training sessions for 40+ members</li>
+            <li>Developed motion bank and case study resources for juniors</li>
+            <li>Pair-mentored 6 Sec 1 and Sec 2 debaters through their first competitions</li>
+            <li>Represented CCA in school leadership council meetings</li>
+            <li>Coordinated logistics for interschool tournaments and invitationals</li>
+          </ul>
+          <div class="reflection-block">
+            <p>The most rewarding part of being VP was not winning competitions — it was watching a nervous Sec 1 student deliver a confident rebuttal by the end of the year. That is the work that lasts.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-mid">Photo here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2: ADC -->
     <div class="activity-block">
       <div class="activity-grid">
         <div>
@@ -1693,53 +1751,168 @@
             <span class="meta-badge">2024</span>
           </div>
           <h3>ASEAN Debating Championship (ADC)</h3>
-          <p class="activity-overview">The ASEAN Debating Championship is an inter-school debate competition I founded to bridge the gap between national debate programmes across Southeast Asia. The event brought together student debaters from Singapore, Vietnam, and beyond for two days of competitive debate, feedback sessions and cross-cultural dialogue.</p>
+          <p class="activity-overview">The ASEAN Debating Championship is an inter-school debate competition I founded to bridge the gap between national debate programmes across Southeast Asia. The two-day event brought together student debaters from Singapore, Vietnam, and beyond for competitive rounds, feedback sessions and cross-cultural dialogue — entirely student-organised.</p>
           <span class="kc-section-label">Key Contributions</span>
           <ul class="kc-list">
-            <li>Conceptualised and pitched the event to school leadership</li>
-            <li>Coordinated with participating schools across 3 countries</li>
-            <li>Recruited and briefed a panel of experienced judges</li>
-            <li>Managed speaker logistics, scheduling and communications</li>
-            <li>Facilitated cross-school feedback sessions post-rounds</li>
+            <li>Conceptualised and pitched the event to school leadership from scratch</li>
+            <li>Coordinated with participating schools and teams across 3 countries</li>
+            <li>Recruited, briefed and managed a panel of experienced adjudicators</li>
+            <li>Handled tabulation, scheduling and all cross-team communications</li>
+            <li>Facilitated cross-school feedback and networking sessions post-rounds</li>
           </ul>
           <span class="kc-section-label">Impact</span>
-          <p style="font-size:0.875rem;color:var(--text-secondary);">ADC created a tangible pathway for debate teams from different countries to compete, learn and build relationships. Participants cited it as their first experience of international-level debate in a student-organised format.</p>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">ADC created a tangible pathway for debate teams across the region to compete and connect. Participants cited it as their first experience of international-level debate in a student-organised format.</p>
           <div class="reflection-block">
-            <p>Running ADC taught me that leading is less about having the answers and more about holding the team together when the answers are unclear. The event also revealed something about myself: I am energised by complexity, not paralysed by it.</p>
+            <p>Running ADC taught me that leading is less about having all the answers and more about holding the team together when the answers are unclear. I learned I am energised by complexity, not paralysed by it.</p>
           </div>
         </div>
         <div class="activity-visual">
-          <div class="visual-box pc-navy">Event Photo</div>
+          <div class="visual-box pc-navy">Photo here</div>
           <div class="visual-box-sm pc-mid">Competition Poster</div>
         </div>
       </div>
     </div>
-    <!-- Debate VP -->
+
+    <!-- 3: Learn2Earn -->
     <div class="activity-block">
       <div class="activity-grid">
         <div>
           <div class="activity-meta">
-            <span class="meta-badge">Vice President</span>
-            <span class="meta-badge">2023–2024</span>
+            <span class="meta-badge">Founder & President</span>
+            <span class="meta-badge">2024</span>
           </div>
-          <h3>Debate CCA — Vice President</h3>
-          <p class="activity-overview">As Vice President of the school's debate CCA, I was responsible for the day-to-day running of training sessions, the mentorship of junior members, and building the culture of the team across two academic years.</p>
+          <h3>Learn2Earn — Entrepreneurship CCA</h3>
+          <p class="activity-overview">I founded Learn2Earn as a student-run entrepreneurship CCA to give peers practical exposure to business thinking, financial literacy and real-world problem-solving. From writing the CCA proposal to recruiting members and designing its first programme calendar, I built the CCA from the ground up while managing its day-to-day operations as President.</p>
           <span class="kc-section-label">Key Contributions</span>
           <ul class="kc-list">
-            <li>Planned and led weekly training sessions for 40+ members</li>
-            <li>Developed motion bank and case study resources for juniors</li>
-            <li>Pair-mentored 6 Sec 1 and Sec 2 debaters</li>
-            <li>Represented CCA in school leadership council meetings</li>
+            <li>Wrote and submitted the official CCA proposal to school leadership</li>
+            <li>Recruited founding member cohort and structured programme curriculum</li>
+            <li>Organised workshops on entrepreneurship, pitching and financial literacy</li>
+            <li>Led the CCA's volunteer day initiative at an HCMC orphanage</li>
+            <li>Oversaw CCA's participation in school-level competitions</li>
           </ul>
           <div class="reflection-block">
-            <p>The most rewarding part of being VP was not winning competitions — it was watching a nervous Sec 1 student deliver a confident rebuttal by the end of the year. That is the work that lasts.</p>
+            <p>Founding a CCA from nothing taught me that the hardest part of leadership is not managing people — it is managing ambiguity. When there is no template, you become the template.</p>
           </div>
         </div>
         <div class="activity-visual">
-          <div class="visual-box pc-mid">Training Photo</div>
+          <div class="visual-box pc-navy">Photo here</div>
         </div>
       </div>
     </div>
+
+    <!-- 4: VYNAS -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Lead Organiser</span>
+            <span class="meta-badge">2023–2024</span>
+          </div>
+          <h3>Vietnamese Youth Alliance in Singapore (VYNAS)</h3>
+          <p class="activity-overview">As Lead Organiser for VYNAS, I planned and executed three large-scale keystone events for the Vietnamese student community in Singapore — the Study Abroad Dream forum, a Career Fair, and a cultural Concert. Each event required extensive coordination across sponsors, vendors, speakers and volunteers, while serving a community that often lacks access to structured support networks.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Led end-to-end event planning for three flagship VYNAS events</li>
+            <li>Managed sponsor outreach, logistics and volunteer coordination</li>
+            <li>Curated speaker lineups for Study Abroad Dream and Career Fair</li>
+            <li>Oversaw production and programming for the annual Concert</li>
+            <li>Built community ties between Vietnamese students across Singapore schools</li>
+          </ul>
+          <span class="kc-section-label">Impact</span>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">Each event drew strong attendance and positive feedback. The Career Fair and Study Abroad forum gave Vietnamese students practical access to guidance and networks they often cannot find elsewhere.</p>
+          <div class="reflection-block">
+            <p>Organising events for my own community felt different — more personal. I was not just executing a programme; I was building something that I wished had existed when I first arrived in Singapore.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-mid">Photo here</div>
+          <div class="visual-box-sm pc-navy">Event Poster</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5: Sec ExCo -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Event Coordinator</span>
+            <span class="meta-badge">2024</span>
+          </div>
+          <h3>Secondary School Scholars Executive Committee (Sec ExCo)</h3>
+          <p class="activity-overview">As Event Coordinator on the Secondary School Scholars Executive Committee, I represented the MOE scholarship cohort and helped plan and coordinate scholar-exclusive events, fostering community and professional development among scholarship recipients across Singapore secondary schools.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Coordinated logistics and programming for Sec ExCo events</li>
+            <li>Liaised between the student committee and school/MOE stakeholders</li>
+            <li>Facilitated networking and bonding activities for scholarship cohort</li>
+            <li>Contributed to agenda-setting and session planning for committee meetings</li>
+          </ul>
+          <div class="reflection-block">
+            <p>Serving on Sec ExCo reminded me that leadership also means representing others faithfully — not just executing well, but listening carefully to the community you speak for.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-navy">Photo here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6: Class Chairperson -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Class Chairperson</span>
+            <span class="meta-badge">2023–2024</span>
+          </div>
+          <h3>Class Chairperson</h3>
+          <p class="activity-overview">As Class Chairperson, I served as the first point of contact between my classmates and teachers, maintaining a positive classroom culture, facilitating communication and ensuring that both student concerns and school expectations were addressed with care and clarity.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Mediated between students and teaching staff on class matters</li>
+            <li>Led class-level initiatives and maintained group morale</li>
+            <li>Organised class participation in school events and activities</li>
+            <li>Provided pastoral support to classmates during high-stress periods</li>
+          </ul>
+          <div class="reflection-block">
+            <p>Being class chairperson taught me that small-scale leadership is no less meaningful than large-scale events. Every classroom has its own dynamics, and navigating them with empathy is its own kind of skill.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-mid">Photo here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7: NYAA Gold -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Gold Awardee</span>
+            <span class="meta-badge">2023–2026</span>
+          </div>
+          <h3>National Youth Achievement Award (NYAA) — Gold</h3>
+          <p class="activity-overview">The NYAA Gold Award is a nationally recognised award requiring sustained commitment across four domains over multiple years: service, skill development, physical activity and an adventurous journey. It is less a single achievement than evidence of consistent dedication — showing up across years, not just in the moments that count.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Service: Nursing home programme, VYNAS events, and school outreach</li>
+            <li>Skill: Advanced public speaking, debate training and entrepreneurship</li>
+            <li>Physical: Sustained physical training commitment over 36 months</li>
+            <li>Adventurous Journey: Multi-day expedition completed in final year</li>
+          </ul>
+          <div class="reflection-block">
+            <p>NYAA Gold is not about being exceptional at everything. It is about the discipline of showing up — week after week, year after year — even when it is inconvenient. That habit, more than any single award, is what I carry forward.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-navy">Photo here</div>
+        </div>
+      </div>
+    </div>
+
   </div>
   <footer>
     <span class="footer-left">Stacy Tran</span>
@@ -1754,61 +1927,99 @@
       <button class="back-btn" onclick="showPage('projects')">&#8592; Back to Projects</button>
       <span class="overline">Communication & Global Perspectives</span>
       <h1>Persuading,<br>Connecting,<br>Listening.</h1>
-      <p class="lead">Debate and MUN have shaped how I think, argue, and understand the world — not just as competitive activities, but as genuine intellectual and human practices.</p>
+      <p class="lead">From competitive debate stages to MUN chambers and a real-world internship analysing Singapore's public spaces — communication, for me, is about understanding people as much as persuading them.</p>
     </div>
   </section>
   <div class="container">
-    <div class="activity-block">
-      <div class="activity-grid">
-        <div>
-          <div class="activity-meta">
-            <span class="meta-badge">Delegate & Chair</span>
-            <span class="meta-badge">2022–2024</span>
-          </div>
-          <h3>Model United Nations</h3>
-          <p class="activity-overview">I have participated in MUN conferences as both delegate and chair, engaging with policy issues spanning climate finance, digital rights, and regional security. Chairing, in particular, demanded a different skillset — less about advocacy, more about facilitation, fairness and keeping complex debates constructive.</p>
-          <span class="kc-section-label">Key Contributions</span>
-          <ul class="kc-list">
-            <li>Chaired ECOSOC and UNEP committees at national conferences</li>
-            <li>Researched and wrote comprehensive chair reports</li>
-            <li>Mentored first-time MUN delegates from my school</li>
-            <li>Represented Vietnam bloc in ASEAN-focused simulations</li>
-          </ul>
-          <div class="reflection-block">
-            <p>Chairing taught me that real influence is not loudness — it is the ability to create a space where people feel safe to speak. I carry that lesson into every room I walk into.</p>
-          </div>
-        </div>
-        <div class="activity-visual">
-          <div class="visual-box pc-mid">MUN Photo</div>
-          <div class="visual-box-sm pc-navy">Committee Session</div>
-        </div>
-      </div>
-    </div>
+
+    <!-- 1: Competitive Debate -->
     <div class="activity-block">
       <div class="activity-grid">
         <div>
           <div class="activity-meta">
             <span class="meta-badge">Competitive Debater</span>
-            <span class="meta-badge">2021–2024</span>
+            <span class="meta-badge">2023–2024</span>
           </div>
           <h3>Competitive Debate</h3>
-          <p class="activity-overview">I have competed in British Parliamentary and Asian Parliamentary formats at interschool and open levels, developing fluency in constructing and attacking complex arguments under time pressure.</p>
+          <p class="activity-overview">I have competed in British Parliamentary and Asian Parliamentary formats at interschool and open levels, developing fluency in constructing and attacking complex arguments under time pressure. Debate trained me to think fast, structure clearly, and argue with conviction — while remaining genuinely open to the other side.</p>
           <span class="kc-section-label">Key Contributions</span>
           <ul class="kc-list">
-            <li>Competed in 10+ interschool tournaments</li>
-            <li>Won Best Speaker at interschool competition (2023)</li>
+            <li>Competed in 10+ interschool and open tournaments</li>
             <li>Represented school at ASEAN-level debate invitational</li>
-            <li>Co-wrote team's motions and case preparation guides</li>
+            <li>Specialised in policy, economics and ethics motions</li>
+            <li>Co-wrote team motions and case preparation guides for juniors</li>
           </ul>
           <div class="reflection-block">
-            <p>Debate taught me that the strongest arguments come not from certainty, but from genuinely understanding the other side. That paradox has changed how I listen.</p>
+            <p>Debate taught me that the strongest arguments come not from certainty, but from genuinely understanding the other side. That paradox has changed how I listen in every conversation — not just competitive ones.</p>
           </div>
         </div>
         <div class="activity-visual">
-          <div class="visual-box pc-navy">Debate Photo</div>
+          <div class="visual-box pc-navy">Photo here</div>
+          <div class="visual-box-sm pc-mid">Tournament Certificate</div>
         </div>
       </div>
     </div>
+
+    <!-- 2: MUN -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Delegate & Chair</span>
+            <span class="meta-badge">2023–2025</span>
+          </div>
+          <h3>Model United Nations (MUN)</h3>
+          <p class="activity-overview">I have participated in multiple MUN conferences as both delegate and chair, engaging with policy issues spanning sustainable finance, digital rights, and regional development. Chairing — particularly at NTU MUN's ECOSOC committee — demanded a distinct skillset: less advocacy, more facilitation, fairness and constructive conflict management.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Chaired ECOSOC committee at NTU MUN — received Verbal Commendation</li>
+            <li>Represented India (UNIDO) researching debt vulnerability in developing nations</li>
+            <li>Represented the Netherlands in ECOSOC on Green Bonds as sustainable finance tools</li>
+            <li>Mentored first-time MUN delegates from my school cohort</li>
+            <li>Researched and wrote comprehensive position papers for each conference</li>
+          </ul>
+          <span class="kc-section-label">Impact</span>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">MUN gave me fluency in policy language and the confidence to hold a room — whether chairing 40 delegates or arguing a minority bloc position under pressure.</p>
+          <div class="reflection-block">
+            <p>Chairing taught me that real influence is not loudness — it is the ability to create a space where people feel heard and safe to disagree. I carry that lesson into every team I work in.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-mid">Photo here</div>
+          <div class="visual-box-sm pc-navy">Committee Session</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3: Science Centre Internship -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Student Intern</span>
+            <span class="meta-badge">Work Exposure Programme</span>
+          </div>
+          <h3>Science Centre Singapore — Work Exposure Programme</h3>
+          <p class="activity-overview">Through the Work Exposure Programme, I interned at Science Centre Singapore with a focus on researching public transitional spaces and analysing Singapore's public third spaces. The project required qualitative and observational research methods, written analysis, and the ability to synthesise findings into clear, communicable insights for a professional audience.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Conducted observational research on Singapore's public transitional spaces</li>
+            <li>Analysed how third spaces function socially and spatially in an urban context</li>
+            <li>Synthesised research findings into a structured report for Science Centre staff</li>
+            <li>Presented findings and recommendations to supervisors at end of programme</li>
+          </ul>
+          <span class="kc-section-label">Impact</span>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">The internship bridged academic learning with real-world professional communication, pushing me to translate observations into insights that a non-student audience could find genuinely useful.</p>
+          <div class="reflection-block">
+            <p>Working at Science Centre gave me a taste of what it means to communicate not to win, but to inform. There are no judges in a workplace — only people trying to understand something together.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-mid">Photo here</div>
+        </div>
+      </div>
+    </div>
+
   </div>
   <footer>
     <span class="footer-left">Stacy Tran</span>
@@ -1823,10 +2034,39 @@
       <button class="back-btn" onclick="showPage('projects')">&#8592; Back to Projects</button>
       <span class="overline">Community & Impact</span>
       <h1>Showing Up,<br>Every Time.</h1>
-      <p class="lead">Service, for me, is a practice of consistent presence and genuine curiosity — not a programme to complete, but a relationship to build.</p>
+      <p class="lead">Service, for me, is a practice of consistent presence and genuine curiosity — from autism festivals and orphanages to nursing homes and hospitals, I show up where I am needed.</p>
     </div>
   </section>
   <div class="container">
+
+    <!-- 1: Lunar New Year -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Volunteer</span>
+            <span class="meta-badge">2024</span>
+          </div>
+          <h3>Lunar New Year Festival & Celebration — 1,000+ Autism Kids</h3>
+          <p class="activity-overview">I volunteered at a large-scale Lunar New Year celebration organised for over 1,000 children with autism spectrum disorder and their families. The event required volunteers to be thoughtful, patient and adaptive — creating a festive, inclusive atmosphere for children whose sensory and social needs vary widely.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Facilitated activity stations designed for children with autism</li>
+            <li>Supported children and families in navigating the event space</li>
+            <li>Coordinated with team leads to manage crowd flow and accessibility</li>
+            <li>Maintained a calm, patient and inclusive presence throughout</li>
+          </ul>
+          <div class="reflection-block">
+            <p>Working with children with autism reminded me that inclusion is not about removing differences — it is about designing spaces where differences are welcomed. That reframing changed how I think about community.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-green">Photo here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2: Nursing Home -->
     <div class="activity-block">
       <div class="activity-grid">
         <div>
@@ -1835,52 +2075,161 @@
             <span class="meta-badge">2023–2024</span>
           </div>
           <h3>Nursing Home Engagement Programme</h3>
-          <p class="activity-overview">Over two semesters, I designed and led a weekly engagement programme for elderly residents at a local nursing home. The programme combined structured activities — including storytelling circles, simple games and craft sessions — with unstructured time for genuine conversation.</p>
+          <p class="activity-overview">Over two semesters, I designed and led a fortnightly engagement programme for elderly residents at NTUC Senior Day Care Centres. The programme combined structured activities — storytelling circles, simple games and craft sessions — with unstructured time for genuine conversation. I continued visiting informally beyond the formal programme.</p>
           <span class="kc-section-label">Key Contributions</span>
           <ul class="kc-list">
             <li>Designed and ran fortnightly activity sessions for 15 residents</li>
-            <li>Trained and briefed 8 student volunteers each session</li>
-            <li>Coordinated with nursing home staff on resident needs</li>
-            <li>Documented sessions and reported outcomes to service-learning coordinator</li>
-            <li>Continued visiting informally beyond the formal programme</li>
+            <li>Trained and briefed 8 student volunteers per session</li>
+            <li>Coordinated with nursing home staff on individual resident needs</li>
+            <li>Documented outcomes and reported to service-learning coordinator</li>
+            <li>Continued informal visits beyond the formal programme period</li>
           </ul>
           <span class="kc-section-label">Impact</span>
-          <p style="font-size:0.875rem;color:var(--text-secondary);">Several residents mentioned the sessions as highlights of their week. Two residents asked specifically for the same student volunteers — a small thing that meant a great deal.</p>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">Several residents mentioned the sessions as the highlight of their week. Two residents asked specifically for the same student volunteers — a small detail that meant a great deal to everyone involved.</p>
           <div class="reflection-block">
-            <p>The most important lesson from this programme: the people we serve often give us more than we give them. Every resident I met left me with something — a story, a perspective, a reminder of what matters.</p>
+            <p>The most important lesson: the people we serve often give us more than we give them. Every resident left me with something — a story, a perspective, a reminder of what matters most.</p>
           </div>
         </div>
         <div class="activity-visual">
-          <div class="visual-box pc-green">Visit Photo</div>
+          <div class="visual-box pc-green">Photo here</div>
           <div class="visual-box-sm pc-green">Activity Session</div>
         </div>
       </div>
     </div>
+
+    <!-- 3: Maplebear -->
     <div class="activity-block">
       <div class="activity-grid">
         <div>
           <div class="activity-meta">
-            <span class="meta-badge">Gold Awardee</span>
-            <span class="meta-badge">2021–2024</span>
+            <span class="meta-badge">Class VIA Project</span>
+            <span class="meta-badge">2024</span>
           </div>
-          <h3>NYAA Gold Award</h3>
-          <p class="activity-overview">The National Youth Achievement Award Gold involved a three-year commitment across four domains: service, skill development, physical activity and an expedition. It was less a single achievement than a habit of sustained commitment.</p>
+          <h3>Class VIA Project — Maplebear Kindergarten</h3>
+          <p class="activity-overview">As part of our class Values-in-Action project, we partnered with Maplebear Kindergarten to design and deliver enrichment sessions for young children. The project required my class to plan age-appropriate activities, communicate clearly with young learners, and reflect on the experience as a team.</p>
           <span class="kc-section-label">Key Contributions</span>
           <ul class="kc-list">
-            <li>Service: Nursing home programme and school outreach</li>
-            <li>Skill: Advanced public speaking and debate training</li>
-            <li>Physical: Weekly training over 36 months</li>
-            <li>Expedition: Multi-day outdoor journey completed in Year 3</li>
+            <li>Co-designed curriculum and activity plans suitable for kindergarten age group</li>
+            <li>Led facilitation during hands-on sessions with the children</li>
+            <li>Coordinated with Maplebear staff on scheduling and learning goals</li>
+            <li>Contributed to team debrief and written reflection submission</li>
           </ul>
           <div class="reflection-block">
-            <p>NYAA Gold is not about being exceptional at everything. It is about the discipline of showing up — week after week, year after year — even when it is inconvenient. That is the skill it really teaches.</p>
+            <p>Teaching young children requires a completely different kind of communication — simpler words, more patience, and a willingness to follow their lead. It was humbling in the best way.</p>
           </div>
         </div>
         <div class="activity-visual">
-          <div class="visual-box pc-green">NYAA Photo</div>
+          <div class="visual-box pc-green">Photo here</div>
         </div>
       </div>
     </div>
+
+    <!-- 4: HCMC Orphanage -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Lead Organiser</span>
+            <span class="meta-badge">2024</span>
+          </div>
+          <h3>Learn2Earn Volunteer Day — HCMC Orphanage</h3>
+          <p class="activity-overview">As President of Learn2Earn, I organised the CCA's first overseas volunteer day at an orphanage in Ho Chi Minh City, Vietnam. The trip combined direct service with cross-cultural exposure, giving Singapore-based students the experience of volunteering in a very different social context from what they knew.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Planned and coordinated the full-day volunteer programme at the orphanage</li>
+            <li>Prepared CCA members with briefings on cultural sensitivity and context</li>
+            <li>Organised activities and brought donated materials for the children</li>
+            <li>Led post-visit debrief and reflection session with the team</li>
+          </ul>
+          <div class="reflection-block">
+            <p>Bringing a Singapore CCA to Vietnam felt full circle — I was translating not just language, but values and context, for people I cared about in both places. That role felt like exactly where I was supposed to be.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-green">Photo here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5: ThinkSingapore -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Volunteer Mentor</span>
+            <span class="meta-badge">2024</span>
+          </div>
+          <h3>Volunteer Mentor — ThinkSingapore</h3>
+          <p class="activity-overview">As a volunteer mentor with ThinkSingapore, I worked with youth participants to develop critical thinking skills, encourage civic engagement, and build confidence in expressing their perspectives. The role demanded active listening, thoughtful questioning and the ability to guide without prescribing answers.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Mentored youth participants in critical thinking and public discourse</li>
+            <li>Facilitated structured discussion sessions on civic and social topics</li>
+            <li>Provided feedback and encouragement to help mentees build confidence</li>
+            <li>Collaborated with other mentors to refine facilitation approaches</li>
+          </ul>
+          <div class="reflection-block">
+            <p>Mentoring taught me that the best thing you can do for someone is not to give them your answers — it is to help them trust their own thinking. That principle shapes how I lead, too.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-green">Photo here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6: Event Photographer -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Event Photographer</span>
+            <span class="meta-badge">2024</span>
+          </div>
+          <h3>Event Photographer — St. Andrew's Hall</h3>
+          <p class="activity-overview">I volunteered as event photographer at St. Andrew's Hall, using photography as a form of service — capturing meaningful moments for communities and organisations that may not otherwise have access to professional documentation of their events.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Photographed key moments and activities throughout the event</li>
+            <li>Edited and delivered a curated photo set to event organisers</li>
+            <li>Coordinated unobtrusively to capture candid, authentic moments</li>
+          </ul>
+          <div class="reflection-block">
+            <p>Photography taught me to be present without intruding — to observe carefully and capture honestly. It is a quieter form of service, but one I find deeply meaningful.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-green">Photo here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7: Ad hoc volunteering -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Ad Hoc Volunteer</span>
+            <span class="meta-badge">2023–2024</span>
+          </div>
+          <h3>Ad Hoc Volunteering — Iftar Event & Kwong Wai Shiu Hospital</h3>
+          <p class="activity-overview">Beyond structured programmes, I have shown up as an ad hoc volunteer at a community Iftar celebration and at Kwong Wai Shiu Hospital. These experiences placed me in communities and contexts very different from my own — requiring adaptability, cultural sensitivity and a genuine willingness to serve without recognition.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Assisted with food distribution and logistics at the Iftar community event</li>
+            <li>Supported hospital volunteers with patient welfare activities at Kwong Wai Shiu</li>
+            <li>Engaged respectfully across cultural and religious community lines</li>
+          </ul>
+          <div class="reflection-block">
+            <p>Ad hoc volunteering is unglamorous by design — there are no certificates and no audience. That is exactly why I keep doing it. Showing up when no one is watching is the clearest measure of values I know.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-green">Photo here</div>
+        </div>
+      </div>
+    </div>
+
   </div>
   <footer>
     <span class="footer-left">Stacy Tran</span>
@@ -1895,57 +2244,148 @@
       <button class="back-btn" onclick="showPage('projects')">&#8592; Back to Projects</button>
       <span class="overline">Sustainability & Innovation</span>
       <h1>Practical<br>Solutions to<br>Real Problems.</h1>
-      <p class="lead">I believe young people can do more than raise awareness about environmental challenges — we can prototype, test and communicate real answers.</p>
+      <p class="lead">From circular-economy products to hospital logistics research — I believe the most meaningful innovation is the kind that starts with a specific, solvable problem and ends with something real.</p>
     </div>
   </section>
   <div class="container">
+
+    <!-- 1: Recycled Oil -->
     <div class="activity-block">
       <div class="activity-grid">
         <div>
           <div class="activity-meta">
-            <span class="meta-badge">Business Concept</span>
+            <span class="meta-badge">Blue Ocean Competition</span>
             <span class="meta-badge">2024</span>
           </div>
           <h3>Recycled Cooking Oil Cleaning Product</h3>
-          <p class="activity-overview">Inspired by the circular economy, I developed a concept for converting waste cooking oil into a biodegradable cleaning product. The idea addresses two parallel problems: the improper disposal of cooking oil and the demand for non-toxic household cleaners.</p>
+          <p class="activity-overview">Inspired by the circular economy, I developed a concept for converting waste cooking oil into a biodegradable cleaning product — presented at the Blue Ocean Student Entrepreneur Competition. The idea addresses two parallel problems: the improper disposal of used cooking oil and the growing demand for non-toxic, eco-friendly household cleaners.</p>
           <span class="kc-section-label">Key Contributions</span>
           <ul class="kc-list">
-            <li>Researched saponification process and soap chemistry</li>
-            <li>Developed business model canvas and sustainability impact analysis</li>
-            <li>Prototyped basic formulation with teacher guidance</li>
-            <li>Presented to panel at school sustainability competition</li>
-            <li>Won Sustainability Innovation Prize at school level</li>
+            <li>Researched saponification chemistry and formulation feasibility</li>
+            <li>Built a business model canvas with cost, pricing and sustainability analysis</li>
+            <li>Benchmarked against existing products (Finish Dishwasher Tablets, Sunlight Floor Cleaner)</li>
+            <li>Prototyped basic product formulation with teacher guidance</li>
+            <li>Pitched to competition panel — noted for commercial and environmental feasibility</li>
           </ul>
           <span class="kc-section-label">Impact</span>
-          <p style="font-size:0.875rem;color:var(--text-secondary);">The project demonstrated that sustainability and commercial viability are not opposites. The panel noted its practical feasibility as a particular strength.</p>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">The project demonstrated that sustainability and commercial viability are not opposites — a practical circular solution can also be a viable business.</p>
           <div class="reflection-block">
-            <p>This project reminded me that you do not need to solve climate change to do something meaningful. Sometimes it is about finding one problem that is small enough to act on — and acting on it well.</p>
+            <p>This project reminded me: you do not need to solve climate change to do something meaningful. Find one problem that is small enough to act on — and act on it well.</p>
           </div>
         </div>
         <div class="activity-visual">
-          <div class="visual-box pc-accent">Project Photo</div>
-          <div class="visual-box-sm pc-warm">Presentation Slide</div>
+          <div class="visual-box pc-accent">Photo here</div>
+          <div class="visual-box-sm pc-warm">Pitch Deck Slide</div>
         </div>
       </div>
     </div>
+
+    <!-- 2: MRT Piezo -->
     <div class="activity-block">
       <div class="activity-grid">
         <div>
           <div class="activity-meta">
-            <span class="meta-badge">STEM Research</span>
-            <span class="meta-badge">2023</span>
+            <span class="meta-badge">SISTEMIC @NJC</span>
+            <span class="meta-badge">STEM Competition</span>
           </div>
-          <h3>Sea-Level Rise Environmental Project</h3>
-          <p class="activity-overview">A STEM-based research project examining the projected impact of sea-level rise on low-lying coastal communities, with a focus on Singapore and Vietnam. The project combined data analysis with community impact storytelling.</p>
+          <h3>Generating AC Current for MRT Tapping Machines via Piezo Sensors</h3>
+          <p class="activity-overview">For the SISTEMIC international STEM competition at NJC, I worked on a project exploring how footstep energy from commuters at MRT tapping machines could be harvested using piezoelectric sensors to generate AC current — making the machines partially or fully self-powered. The project combined electrical engineering principles with urban sustainability design.</p>
           <span class="kc-section-label">Key Contributions</span>
           <ul class="kc-list">
-            <li>Compiled and visualised sea-level projection data from IPCC reports</li>
-            <li>Mapped impact on specific communities in Vietnam's Mekong Delta</li>
-            <li>Developed policy recommendation brief for school audience</li>
-            <li>Presented findings at school science symposium</li>
+            <li>Researched piezoelectric energy harvesting principles and applications</li>
+            <li>Modelled energy output estimates based on commuter footfall data</li>
+            <li>Designed a conceptual integration system for MRT tapping machine architecture</li>
+            <li>Presented project findings and prototype concept to international competition judges</li>
+          </ul>
+          <span class="kc-section-label">Impact</span>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">The project proposed a scalable, low-disruption approach to embedding renewable energy generation into existing urban infrastructure — relevant to Singapore's Smart Nation and sustainability agenda.</p>
+          <div class="reflection-block">
+            <p>Working on this project taught me that sustainability solutions do not always require new infrastructure — sometimes the most elegant answer is embedded in what already exists.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-warm">Photo here</div>
+          <div class="visual-box-sm pc-accent">Project Diagram</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3: Textile Waste -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Upcycling Initiative</span>
+            <span class="meta-badge">2023–2024</span>
+          </div>
+          <h3>Textile Waste Upcycling</h3>
+          <p class="activity-overview">I designed a circular fashion concept centred on upcycling textile factory offcuts into Qipao-inspired pouches and Chinese-knot keychains. The project explored how mass production systems and digital fabrication technology could scale artisanal upcycling into a commercially viable and culturally meaningful product line.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Sourced textile waste samples and researched available factory surplus streams</li>
+            <li>Designed product prototypes inspired by traditional Chinese aesthetics</li>
+            <li>Mapped a circular production model from waste input to finished product</li>
+            <li>Assessed commercial viability and pricing for target consumer segments</li>
           </ul>
           <div class="reflection-block">
-            <p>Working on this project changed how I see Vietnam — not just as home, but as a place genuinely at risk. That personal stake made the research feel less like an assignment and more like a responsibility.</p>
+            <p>Fashion is one of the world's most polluting industries — and one of the least discussed in sustainability circles. This project showed me that culture and sustainability can reinforce each other rather than compete.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-accent">Photo here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4: Vacuum Tube Hospital -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">Research Project</span>
+            <span class="meta-badge">2023</span>
+          </div>
+          <h3>Sterilised Vacuum Tube Systems for Hospital Supply Transport</h3>
+          <p class="activity-overview">Inspired by challenges exposed during the COVID-19 pandemic, I researched the feasibility of building sterilised vacuum tube systems to transport medical supplies within hospitals and quarantine facilities — reducing physical contact between staff and potentially contaminated materials during outbreak scenarios.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Reviewed existing pneumatic tube system technology in hospital settings</li>
+            <li>Researched sterilisation methods compatible with enclosed transport systems</li>
+            <li>Assessed feasibility and cost-effectiveness for pandemic-use quarantine facilities</li>
+            <li>Produced a written research report with design recommendations</li>
+          </ul>
+          <span class="kc-section-label">Impact</span>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">The research highlighted a practical infrastructure gap in pandemic preparedness — one that existing technology could plausibly address with targeted adaptation.</p>
+          <div class="reflection-block">
+            <p>The pandemic made visible problems that had always existed in healthcare logistics. This project taught me to look at crises not just as tragedies, but as invitations to solve something that was always overdue.</p>
+          </div>
+        </div>
+        <div class="activity-visual">
+          <div class="visual-box pc-warm">Research Diagram</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5: Time Management Research -->
+    <div class="activity-block">
+      <div class="activity-grid">
+        <div>
+          <div class="activity-meta">
+            <span class="meta-badge">HCMC Scientific Research Competition</span>
+            <span class="meta-badge">Third Prize · 2023</span>
+          </div>
+          <h3>Behavioural Research on Time Management of High School Students</h3>
+          <p class="activity-overview">I conducted a behavioural research study examining time management patterns among high school students, their relationship to academic performance and wellbeing, and the interventions most effective at improving planning behaviour. The study was submitted to the Ho Chi Minh City City-wide Scientific Research Competition, where it received a Third Prize.</p>
+          <span class="kc-section-label">Key Contributions</span>
+          <ul class="kc-list">
+            <li>Designed research methodology including survey instruments and data collection</li>
+            <li>Collected and analysed data from a sample of high school student respondents</li>
+            <li>Identified key patterns in procrastination, goal-setting and planning behaviour</li>
+            <li>Produced a written research paper and presented findings to competition judges</li>
+            <li>Awarded Third Prize at city-wide competition level</li>
+          </ul>
+          <div class="reflection-block">
+            <p>Researching time management as a student who was trying to manage my own time was both ironic and instructive. Understanding the behavioural science behind something you live every day changes how you approach it.</p>
           </div>
         </div>
         <div class="activity-visual">
@@ -1953,6 +2393,7 @@
         </div>
       </div>
     </div>
+
   </div>
   <footer>
     <span class="footer-left">Stacy Tran</span>
@@ -1984,11 +2425,11 @@
         </div>
         <div class="contact-item">
           <div class="ci-icon">
-            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
           </div>
           <div>
-            <span class="ci-label">LinkedIn</span>
-            <span class="ci-value">linkedin.com/in/stacy-tran</span>
+            <span class="ci-label">Phone</span>
+            <span class="ci-value">+65 XXXX XXXX</span>
           </div>
         </div>
         <div class="contact-item">
