@@ -291,6 +291,12 @@
     overflow: hidden;
     position: relative;
   }
+  .hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
   .hero-photo-bg {
     width: 100%; height: 100%;
     background: linear-gradient(145deg, var(--navy-light) 0%, var(--warm-grey) 100%);
@@ -1443,10 +1449,7 @@
         </div>
         <div class="hero-photo-frame fade-in">
           <div class="hero-photo">
-            <div class="hero-photo-bg">
-              <div class="photo-placeholder-icon"></div>
-              <span class="photo-placeholder-text">Photo here</span>
-            </div>
+            <img scr="profile.jpg" alt="Stacy Thuy Tran">
           </div>
           <div class="hero-photo-accent"></div>
         </div>
